@@ -20,6 +20,7 @@ films: List[GFILMS] = [
 async def welcum ():
     return Response (content='Welcome to the app ٩( ᐛ )و', media_type="text/plain")
 
+# CRUD для GFILMS
 @app.get("/all_films/", response_model = List[GFILMS])
 async def all_films():
     return films
